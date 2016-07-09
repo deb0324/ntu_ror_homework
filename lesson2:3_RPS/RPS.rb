@@ -5,24 +5,13 @@ def check_winner(user, comp)
     # game logic
     case user
     when "R"
-        if comp == "S"
-            return "You Won! Wohoooo :D"
-        else
-            return "You Lost :( "
-        end
+        return comp == "S" ? "You Won! Wohoooo :D" : "You Lost :( "
 
     when "P"
-        if comp == "R"
-            return "You Won! Wohoooo :D"
-        else
-            return "You Lost :( "
-        end
+        return comp == "R" ? "You Won! Wohoooo :D" : "You Lost :( "
+
     when "S"
-        if comp == "P"
-            return "You Won! Wohoooo :D"
-        else
-            return "You Lost :("
-        end
+        return comp == "P" ? "You Won! Wohoooo :D" : "You Lost :( "
     end
 end
 
@@ -41,6 +30,7 @@ while continue != "N"
 
     #generate random outcome
     comp_input = ["R","P","S"].sample
+    puts "Computer played: #{comp_input}"
 
     #determine winner
     puts check_winner(user_input, comp_input)

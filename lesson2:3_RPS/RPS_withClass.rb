@@ -17,26 +17,14 @@ class Player
         
     # game logic
         case user
-            when "R"
-            if comp == "S"
-                return "You Won! Wohoooo :D"
-            else
-                return "You Lost :( "
-            end
+        when "R"
+            return comp == "S" ? "You Won! Wohoooo :D" : "You Lost :( "
 
         when "P"
-            if comp == "R"
-                return "You Won! Wohoooo :D"
-            else
-                return "You Lost :( "
-            end
+            return comp == "R" ? "You Won! Wohoooo :D" : "You Lost :( "
 
         when "S"
-            if comp == "P"
-                return "You Won! Wohoooo :D"
-            else
-                return "You Lost :("
-            end
+            return comp == "P" ? "You Won! Wohoooo :D" : "You Lost :( "
         end
     end
 end
